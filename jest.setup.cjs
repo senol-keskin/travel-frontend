@@ -1,8 +1,8 @@
-require('@testing-library/jest-dom');
+require('@testing-library/jest-dom')
 
-const { getComputedStyle } = window;
-window.getComputedStyle = (elt) => getComputedStyle(elt);
-window.HTMLElement.prototype.scrollIntoView = () => { };
+const { getComputedStyle } = window
+window.getComputedStyle = (elt) => getComputedStyle(elt)
+window.HTMLElement.prototype.scrollIntoView = () => {}
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -16,12 +16,12 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
-});
+})
 
 class ResizeObserver {
-  observe() { }
-  unobserve() { }
-  disconnect() { }
+  observe() {}
+  unobserve() {}
+  disconnect() {}
 }
 
-window.ResizeObserver = ResizeObserver;
+window.ResizeObserver = ResizeObserver
