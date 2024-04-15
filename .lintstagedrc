@@ -1,4 +1,4 @@
 {
-  "src/**/*.{js,jsx,ts,tsx}": ["prettier --write", "eslint --fix", "eslint", "jest"],
+  "src/**/*.{js,jsx,ts,tsx}": ["prettier --write", "eslint --fix", "eslint", "jest --bail --findRelatedTests"],
   "src/**/*.{json,css,md}": ["prettier --write"]
 }
